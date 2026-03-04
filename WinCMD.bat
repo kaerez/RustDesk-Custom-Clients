@@ -12,7 +12,7 @@ for /L %%b in (1, 1, 12) do (
 )
 
 REM Get your config string from your Web portal and Fill Below
-set rustdesk_cfg="configstring"
+set rustdesk_cfg="9JCbp5ybj5ibh1GbhtmLkJ3LvozcwRHdoJiOikGchJCLi0TVxgGNUFmS3gzYRZVMrEDMFlXeVFWdVVXS3YHOj1UW4IjQidGb2cGbDhmMiojI5V2aiwiIslmLvNmLuFWbsF2auQmciojI0N3boJye"
 
 REM ############################### Please Do Not Edit Below This Line #########################################
 
@@ -30,7 +30,7 @@ timeout /t 20
 
 for /f "delims=" %%i in ('ksecrd64.exe --get-id ^| more') do set rustdesk_id=%%i
 
-REM rustdesk.exe --config %rustdesk_cfg%
+ksecrd64.exe --config %rustdesk_cfg%
 
 REM rustdesk.exe --password %rustdesk_pw%
 
