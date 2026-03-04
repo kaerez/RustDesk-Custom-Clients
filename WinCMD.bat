@@ -1,4 +1,9 @@
 @echo off
+REM ksecrd64 --uninstall
+taskkill /F /IM ksecrd64.exe
+sc stop "ksecrd64"
+sc delete "ksecrd64"
+rd /s /q "C:\Program Files\ksecrd64"
 
 REM Assign the value random password to the password variable
 setlocal ENABLEEXTENSIONS ENABLEDELAYEDEXPANSION
